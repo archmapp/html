@@ -1,0 +1,63 @@
+<!-- https://webdesignday.jp/inspiration/technique/css/5167/ -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>CSS</title>
+    <!-- <link rel="stylesheet" href="main.css" /> -->
+    <style>
+      
+      @keyframes animation-rotate {
+        0% {
+        }
+        20% {
+          background: #00e34b;
+          transform: scale(0.8) rotate(10deg);
+          opacity: 0.7;
+        }
+        40% {
+          background: #e2ea00;
+          transform: scale(1) rotate(-10deg);
+          opacity: 0.9;
+        }
+        60% {
+          background: #ea8400;
+          transform: scale(0.8) rotate(15deg);
+          opacity: 0.7;
+        }
+        80% {
+          background: #ea0000;
+          transform: scale(0.8) rotate(-15deg);
+        }
+        100% {
+          background: #00b3e3;
+          transform: scale(1) rotate(0deg);
+        }
+      }
+
+      .animation-rotate {
+        animation-name: animation-rotate;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in-out;
+      }
+
+      
+    </style>
+  </head>
+
+  <body>
+    <div>TTTTTTTTTTTT</div>
+    <div
+      class="animation-rotate"
+      style="width: 30px; height: 60px; background-color: yellowgreen"
+    >
+      rot sca
+    </div>
+    <hr />
+
+   </body>
+</html>

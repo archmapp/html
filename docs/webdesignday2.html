@@ -1,0 +1,189 @@
+<!-- https://webdesignday.jp/inspiration/technique/css/5167/ -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>CSS</title>
+    <!-- <link rel="stylesheet" href="main.css" /> -->
+    <style>
+      @keyframes animation-sample {
+        0% {
+          width: 0;
+        }
+        100% {
+          width: 100%;
+        }
+      }
+      .animation-box {
+        animation-name: animation-sample;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+      }
+
+      @keyframes animation-sample2 {
+        from {
+          width: 0;
+        }
+        to {
+          width: 100%;
+        }
+      }
+      .animation-box2 {
+        animation-name: animation-sample2;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+      }
+
+      @keyframes animation-timing {
+        0% {
+          width: 0;
+        }
+        25% {
+          width: 50%;
+        }
+        50% {
+          width: 25%;
+        }
+        75% {
+          width: 50%;
+        }
+        100% {
+          width: 100%;
+        }
+      }
+      .animation-box3 {
+        animation-name: animation-timing;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+      }
+
+      @keyframes animation-rotate {
+        0% {
+        }
+        20% {
+          background: #00e34b;
+          transform: scale(1.2) rotate(45deg);
+        }
+        40% {
+          background: #e2ea00;
+          transform: scale(0.8) rotate(-45deg);
+        }
+        60% {
+          background: #ea8400;
+          transform: scale(1) rotate(90deg);
+        }
+        80% {
+          background: #ea0000;
+          transform: scale(1.2) rotate(-90deg);
+        }
+        100% {
+          background: #00b3e3;
+          transform: scale(1) rotate(0deg);
+        }
+      }
+      .animation-rotate {
+        animation-name: animation-rotate;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+      }
+
+      @keyframes animation-ease-in-out {
+        0% {
+          width: 0;
+        }
+        100% {
+          width: 100%;
+        }
+      }
+      .animation-ease-in-out {
+        animation-name: animation-sample;
+        animation-duration: 2s;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: infinite;
+      }
+
+      /* animationプロパティでまとめて指定 */
+      /* 順番は上記の通りでなくても問題ありませんが、「animation-duration」と「animation-delay」は共に秒数を指定するので、先に書いたものが「animation-duration」、後に書いたものが「animation-delay」として処理されます */
+      @keyframes animation-some {
+        0% {
+          width: 0;
+        }
+        100% {
+          width: 100%;
+        }
+      }
+      @keyframes fadeIn {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+      @keyframes widthIn {
+        0% {
+          width: 0;
+        }
+        100% {
+          width: 100%;
+        }
+      }
+      
+      .animation-some {
+        animation: fadeIn 4s ease-in-out 5s infinite reverse forwards running;
+      }
+      .animation-some2 {
+        animation: fadeIn 4s infinite, widthIn 4s infinite;
+      }
+
+    </style>
+  </head>
+
+  <body>
+    <div>TTTTTTTTTTTT</div>
+    <div class="animation-box" style="height: 100px; background-color: salmon">
+      width: 0; height: 100px;
+    </div>
+    <hr />
+    <div
+      class="animation-ease-in-out"
+      style="height: 100px; background-color: salmon"
+    >
+      ease-in-out;
+    </div>
+    <hr />
+
+    <div class="animation-box" style="height: 50px; background-color: green">
+      width: 0; height: 500px;
+    </div>
+    <hr />
+    <div class="animation-box2" style="height: 50px; background-color: blue">
+      from {width: 0;} to
+    </div>
+    <hr />
+    <div
+      class="animation-box3"
+      style="height: 30px; background-color: yellowgreen"
+    ></div>
+    <hr />
+    <div
+      class="animation-rotate"
+      style="width: 60px; height: 60px; background-color: yellowgreen"
+    >
+      rotate scale
+    </div>
+    <hr />
+
+    <div class="animation-some" style="height: 100px; background-color: salmon">
+      class="animation-some"
+    </div>
+
+    <div class="animation-some2" style="height: 100px; background-color: salmon">
+      class="animation-some2"
+    </div>
+    <hr />
+  </body>
+</html>
