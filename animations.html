@@ -1,0 +1,97 @@
+<!-- https://www.mikedane.com/web-development/css/animations/ -->
+<!-- https://www.w3schools.com/ -->
+
+<!-- https://jonibologna.com/announcing-a-field-guide-to-flexbox -->
+<!-- https://jonibologna.com/flexbox-cheatsheet -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>CSS</title>
+    <!-- <link rel="stylesheet" href="main.css" /> -->
+    <style>
+      @keyframes change-color {
+        from {
+          background-color: salmon;
+        }
+        to {
+          background-color: lightblue;
+        }
+      }
+
+      @keyframes change-color1 {
+        0% {
+          background-color: red;
+        }
+        15% {
+          background-color: orange;
+          top: 10px;
+          left: 10px;
+        }
+        30% {
+          background-color: yellow;
+          top: 20px;
+          left: 20px;
+        }
+        45% {
+          background-color: green;
+          top: 30px;
+          left: 30px;
+        }
+        70% {
+          background-color: blue;
+          top: 40px;
+          left: 40px;
+        }
+        100% {
+          background-color: purple;
+          top: 50px;
+          left: 50;
+        }
+      }
+
+      .box-animation {
+        animation-name: change-color;
+        animation-duration: 3s;
+        animation-delay: 2s;
+        animation-iteration-count: 2;
+      }
+
+      .box-animation1 {
+        animation-name: change-color1;
+        animation-duration: 3s;
+        /* animation-delay: 2s; */
+        animation-iteration-count: 2;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div>TTTTTTTTTTTT</div>
+    <div
+      class="box-animation"
+      style="
+        position: relative;
+        top: 20px;
+        width: 90px;
+        height: 90px;
+        background-color: salmon;
+      "
+    ></div>
+    <hr />
+    <div
+      class="box-animation1"
+      style="
+        position: relative;
+        top: 20px;
+        width: 90px;
+        height: 90px;
+        background-color: salmon;
+      "
+    ></div>
+  </body>
+</html>
