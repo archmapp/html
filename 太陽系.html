@@ -14,28 +14,45 @@
 				height: 100%;
 			} */
 			body {
-				background-color: #D5E7E4;
+				background-color: #d5e7e4;
 				height: 100vh;
 				display: flex;
 				justify-content: center;
 				align-items: center;
 			}
 
-			#canvas {
+			.align-items {
+				display: inline-flex;
+				align-items: center;
+			}
+
+			.alignItems {
+				display: flex;
+				align-items: center;
+			}
+
+			.alignItems2 {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+
+			#myCanvas {
+				border-radius: 7px;
 			}
 		</style>
 	</head>
 
 	<body>
 		<div id="canvas">
-      <canvas id="myCanvas" width="300" height="300" ></canvas>
-    </div>
+			<canvas id="myCanvas" width="300" height="300"></canvas>
+		</div>
 
 		<script>
 			var sun = new Image()
 			var moon = new Image()
 			var earth = new Image()
-      
+
 			function init() {
 				sun.src = 'https://mdn.mozillademos.org/files/1456/Canvas_sun.png'
 				moon.src = 'https://mdn.mozillademos.org/files/1443/Canvas_moon.png'
